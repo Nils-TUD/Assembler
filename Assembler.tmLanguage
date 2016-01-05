@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>S</string>
+		<string>s</string>
+		<string>asm</string>
+	</array>
+	<key>name</key>
+	<string>Assembler (generic)</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Preprocessor directive</string>
+			<key>match</key>
+			<string>\s*^#\s*(if|else|elif|endif|include).*</string>
+			<key>name</key>
+			<string>keyword.control.import.include.c</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>One-line comments</string>
+			<key>match</key>
+			<string>(//|#|;).*</string>
+			<key>name</key>
+			<string>comment.line</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>comment</key>
+			<string>Multi-line comments</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Label</string>
+			<key>match</key>
+			<string>^[0-9a-zA-Z_]+:</string>
+			<key>name</key>
+			<string>entity.name.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Directive</string>
+			<key>match</key>
+			<string>^\s*\.[a-zA-Z0-9_]+</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.asm</string>
+	<key>uuid</key>
+	<string>ca03e751-04ef-4330-9a6b-9b99aae1c418</string>
+</dict>
+</plist>
